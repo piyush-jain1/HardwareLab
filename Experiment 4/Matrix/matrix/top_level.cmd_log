@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "G:/Sem IV/Hardware Lab/Hard_Assignment 4/Matrix/matrix/top_level.xst" -ofn "G:/Sem IV/Hardware Lab/Hard_Assignment 4/Matrix/matrix/top_level.syr" 
+xst -intstyle ise -ifn "G:/Sem IV/Hardware Lab/Hard_Assignment 4/Matrix/matrix/top_level.xst" -ofn "G:/Sem IV/Hardware Lab/Hard_Assignment 4/Matrix/matrix/top_level.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_level.ucf -p xc6slx45-csg324-3 "top_level.ngc" top_level.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_level_map.ncd top_level.ngd top_level.pcf 

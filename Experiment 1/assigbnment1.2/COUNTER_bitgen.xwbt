@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\Sem IV\Hardware Lab\assigbnment1.2\COUNTER.ncd
+OUTFILE=G:\Sem IV\Hardware Lab\assigbnment1.2\COUNTER.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=G:\Sem IV\Hardware Lab\assigbnment1.2
+LICENSE=WebPack
+USER_INFO=211293815_0_0_132

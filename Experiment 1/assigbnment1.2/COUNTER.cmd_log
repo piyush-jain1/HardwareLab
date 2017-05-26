@@ -1,0 +1,22 @@
+xst -intstyle ise -ifn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.xst" -ofn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.syr" 
+xst -intstyle ise -ifn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.xst" -ofn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc6slx45-csg324-3 "COUNTER.ngc" COUNTER.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o COUNTER_map.ncd COUNTER.ngd COUNTER.pcf 
+par -w -intstyle ise -ol high -mt off COUNTER_map.ncd COUNTER.ncd COUNTER.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml COUNTER.twx COUNTER.ncd -o COUNTER.twr COUNTER.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f COUNTER.ut COUNTER.ncd 
+xst -intstyle ise -ifn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.xst" -ofn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.syr" 
+xst -intstyle ise -ifn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.xst" -ofn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc6slx45-csg324-3 "COUNTER.ngc" COUNTER.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o COUNTER_map.ncd COUNTER.ngd COUNTER.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc6slx45-csg324-3 "COUNTER.ngc" COUNTER.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o COUNTER_map.ncd COUNTER.ngd COUNTER.pcf 
+par -w -intstyle ise -ol high -mt off COUNTER_map.ncd COUNTER.ncd COUNTER.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml COUNTER.twx COUNTER.ncd -o COUNTER.twr COUNTER.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f COUNTER.ut COUNTER.ncd 
+xst -intstyle ise -ifn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.xst" -ofn "G:/Sem IV/Hardware Lab/assigbnment1.2/COUNTER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc6slx45-csg324-3 "COUNTER.ngc" COUNTER.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o COUNTER_map.ncd COUNTER.ngd COUNTER.pcf 
+par -w -intstyle ise -ol high -mt off COUNTER_map.ncd COUNTER.ncd COUNTER.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml COUNTER.twx COUNTER.ncd -o COUNTER.twr COUNTER.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f COUNTER.ut COUNTER.ncd 

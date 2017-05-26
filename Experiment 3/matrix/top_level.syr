@@ -1,0 +1,1017 @@
+Release 14.1 - xst P.15xf (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: top_level.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_level.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_level"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : top_level
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/piyush/matrix/modules.vhd" into library work
+Parsing entity <modules>.
+Parsing architecture <Behavioral> of entity <modules>.
+Parsing VHDL file "/home/piyush/matrix/comm_fpga_fx2.vhd" into library work
+Parsing entity <comm_fpga_fx2>.
+Parsing architecture <behavioural> of entity <comm_fpga_fx2>.
+Parsing VHDL file "/home/piyush/matrix/top_level.vhd" into library work
+Parsing entity <top_level>.
+Parsing architecture <behavioural> of entity <top_level>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <top_level> (architecture <behavioural>) from library <work>.
+WARNING:HDLCompiler:1127 - "/home/piyush/matrix/top_level.vhd" Line 83: Assignment to to_c ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 98: curr_state should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 105: temp_addr_min should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 106: temp_addr_max should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 107: check_addr_min should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 108: h2fvalid should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 113: h2fvalid should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 114: h2fdata should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 129: temp_addr_min should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 130: temp_addr_max should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 131: check_addr_min should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 132: h2fvalid should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 138: h2fvalid should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 139: h2fdata should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 142: to_b should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 150: h2fvalid should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 152: h2fdata should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 153: h2fdata should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 168: out_ram_x should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/piyush/matrix/top_level.vhd" Line 171: out_ram_y should be on the sensitivity list of the process
+
+Elaborating entity <modules> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <comm_fpga_fx2> (architecture <behavioural>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_level>.
+    Related source file is "/home/piyush/matrix/top_level.vhd".
+WARNING:Xst:647 - Input <slide_sw_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/piyush/matrix/top_level.vhd" line 212: Output port <f2hReady_out> of the instance <comm_fpga_fx2> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <to_B>.
+    Found 8-bit register for signal <in_ram_x>.
+    Found 8-bit register for signal <in_ram_y>.
+    Found 8-bit register for signal <we_ram>.
+    Found 3-bit register for signal <curr_state>.
+    Found finite state machine <FSM_0> for signal <curr_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 12                                             |
+    | Clock              | fx2Clk_in (rising_edge)                        |
+    | Power Up State     | writing_a1                                     |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit 8-to-1 multiplexer for signal <chanAddr[2]_out_ram_x[7][7]_wide_mux_95_OUT<7>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <chanAddr[2]_out_ram_x[7][7]_wide_mux_95_OUT<6>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <chanAddr[2]_out_ram_x[7][7]_wide_mux_95_OUT<5>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <chanAddr[2]_out_ram_x[7][7]_wide_mux_95_OUT<4>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <chanAddr[2]_out_ram_x[7][7]_wide_mux_95_OUT<3>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <chanAddr[2]_out_ram_x[7][7]_wide_mux_95_OUT<2>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <chanAddr[2]_out_ram_x[7][7]_wide_mux_95_OUT<1>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <chanAddr[2]_out_ram_x[7][7]_wide_mux_95_OUT<0>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_out_ram_y[7][7]_wide_mux_99_OUT<7>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_out_ram_y[7][7]_wide_mux_99_OUT<6>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_out_ram_y[7][7]_wide_mux_99_OUT<5>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_out_ram_y[7][7]_wide_mux_99_OUT<4>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_out_ram_y[7][7]_wide_mux_99_OUT<3>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_out_ram_y[7][7]_wide_mux_99_OUT<2>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_out_ram_y[7][7]_wide_mux_99_OUT<1>> created at line 170.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_out_ram_y[7][7]_wide_mux_99_OUT<0>> created at line 170.
+WARNING:Xst:737 - Found 1-bit latch for signal <we_ram_select>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_addr_min<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_addr_min<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_addr_min<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_addr_max<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_addr_max<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_addr_max<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <check_addr_min<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <check_addr_min<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <check_addr_min<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <check_addr_min<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <check_addr_max<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <check_addr_max<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <check_addr_max<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_x_next<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_x_next<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_x_next<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_x_next<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_x_next<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_x_next<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_x_next<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_x_next<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_B_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_y_next<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_y_next<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_y_next<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_y_next<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_y_next<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_y_next<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_y_next<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <in_ram_y_next<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <enable_dsp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f2hData<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f2hData<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f2hData<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f2hData<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f2hData<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f2hData<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f2hData<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f2hData<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reset_dsp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 7-bit comparator lessequal for signal <n0006> created at line 131
+    Found 7-bit comparator greater for signal <chanAddr[6]_check_addr_max[6]_LessThan_49_o> created at line 131
+    Found 4-bit comparator lessequal for signal <n0039> created at line 167
+    Found 4-bit comparator lessequal for signal <n0042> created at line 170
+    Summary:
+	inferred  25 D-type flip-flop(s).
+	inferred  41 Latch(s).
+	inferred   4 Comparator(s).
+	inferred  74 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <top_level> synthesized.
+
+Synthesizing Unit <modules>.
+    Related source file is "/home/piyush/matrix/modules.vhd".
+WARNING:Xst:647 - Input <address<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <data_o_x>.
+    Found 8-bit register for signal <data_o_y>.
+    Found 8-bit register for signal <acc_x>.
+    Found 8-bit register for signal <acc_y>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <modules> synthesized.
+
+Synthesizing Unit <comm_fpga_fx2>.
+    Related source file is "/home/piyush/matrix/comm_fpga_fx2.vhd".
+    Found 32-bit register for signal <count>.
+    Found 7-bit register for signal <chanAddr>.
+    Found 1-bit register for signal <isWrite>.
+    Found 1-bit register for signal <isAligned>.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 21                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 8                                              |
+    | Clock              | fx2Clk_in (rising_edge)                        |
+    | Power Up State     | s_idle                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit subtractor for signal <GND_280_o_GND_280_o_sub_18_OUT<31:0>> created at line 1308.
+    Found 1-bit tristate buffer for signal <fx2Data_io<7>> created at line 226
+    Found 1-bit tristate buffer for signal <fx2Data_io<6>> created at line 226
+    Found 1-bit tristate buffer for signal <fx2Data_io<5>> created at line 226
+    Found 1-bit tristate buffer for signal <fx2Data_io<4>> created at line 226
+    Found 1-bit tristate buffer for signal <fx2Data_io<3>> created at line 226
+    Found 1-bit tristate buffer for signal <fx2Data_io<2>> created at line 226
+    Found 1-bit tristate buffer for signal <fx2Data_io<1>> created at line 226
+    Found 1-bit tristate buffer for signal <fx2Data_io<0>> created at line 226
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  41 D-type flip-flop(s).
+	inferred  48 Multiplexer(s).
+	inferred   8 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <comm_fpga_fx2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit subtractor                                     : 1
+# Registers                                            : 40
+ 1-bit register                                        : 3
+ 32-bit register                                       : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 35
+# Latches                                              : 41
+ 1-bit latch                                           : 41
+# Comparators                                          : 4
+ 4-bit comparator lessequal                            : 2
+ 7-bit comparator greater                              : 1
+ 7-bit comparator lessequal                            : 1
+# Multiplexers                                         : 122
+ 1-bit 2-to-1 multiplexer                              : 82
+ 1-bit 8-to-1 multiplexer                              : 16
+ 2-bit 2-to-1 multiplexer                              : 7
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 5
+ 8-bit 2-to-1 multiplexer                              : 10
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch to_B_next hinder the constant cleaning in the block top_level.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch reset_dsp hinder the constant cleaning in the block top_level.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <acc_x_4> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_5> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_6> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_7> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_0> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_1> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_2> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_3> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_4> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_5> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_6> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_0> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_1> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_2> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_3> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_4> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_5> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_6> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_7> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_0> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_1> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_2> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_3> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_4> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_5> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_6> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_7> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_0> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_1> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_2> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_3> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_4> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_5> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_6> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_0> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_1> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_2> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_3> has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_5> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_6> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_0> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_1> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_2> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_3> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_4> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_5> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_6> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_7> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_0> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_1> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_2> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_3> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_4> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_5> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_6> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <check_addr_min_3> has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_0> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_1> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_2> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_3> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_4> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_5> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_6> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_0> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_1> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_2> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_3> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_4> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_5> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_6> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_7> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_0> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_1> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_2> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_3> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_4> has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_0> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_6> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_5> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_4> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_3> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_2> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_1> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_0> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_7> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_6> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_5> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_4> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_3> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_2> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_1> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_0> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_1> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_2> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_3> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_4> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_5> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_6> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_7> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_0> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_1> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_2> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_3> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_4> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_5> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_6> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_0> has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_1> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_2> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_3> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_4> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_5> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_6> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_x_7> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_0> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_1> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_2> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_3> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_4> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_5> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_6> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <GEN_MODULES[7].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <GEN_MODULES[6].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <GEN_MODULES[0].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <GEN_MODULES[2].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <GEN_MODULES[5].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <GEN_MODULES[3].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <GEN_MODULES[1].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <GEN_MODULES[4].MODULESX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <we_ram_0> is unconnected in block <top_level>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <we_ram_1> is unconnected in block <top_level>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <we_ram_2> is unconnected in block <top_level>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <we_ram_3> is unconnected in block <top_level>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <we_ram_4> is unconnected in block <top_level>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <we_ram_5> is unconnected in block <top_level>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <we_ram_6> is unconnected in block <top_level>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <we_ram_7> is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <reset_dsp> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <enable_dsp> of sequential type is unconnected in block <top_level>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit subtractor                                     : 1
+# Registers                                            : 322
+ Flip-Flops                                            : 322
+# Comparators                                          : 4
+ 4-bit comparator lessequal                            : 2
+ 7-bit comparator greater                              : 1
+ 7-bit comparator lessequal                            : 1
+# Multiplexers                                         : 122
+ 1-bit 2-to-1 multiplexer                              : 82
+ 1-bit 8-to-1 multiplexer                              : 16
+ 2-bit 2-to-1 multiplexer                              : 7
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 5
+ 8-bit 2-to-1 multiplexer                              : 10
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <acc_y_7> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_y_6> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_y_5> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_y_4> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_y_3> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_y_2> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_y_1> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_y_0> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_x_7> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_x_6> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_x_5> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_x_4> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_x_3> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_x_2> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_x_1> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <acc_x_0> has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_7> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_6> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_5> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_4> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_3> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_2> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_1> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_y_0> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_7> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_6> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_5> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_4> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_3> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_2> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_1> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_o_x_0> (without init value) has a constant value of 0 in block <modules>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch to_B_next hinder the constant cleaning in the block top_level.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch reset_dsp hinder the constant cleaning in the block top_level.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <check_addr_min_3> has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <in_ram_x_next_7> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_next_7> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_next_6> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_next_6> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_next_5> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_next_5> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_next_4> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_next_4> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_next_3> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_next_3> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_next_2> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_next_2> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_next_1> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_next_1> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_next_0> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_next_0> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_0> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_1> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_2> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_3> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_4> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_5> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_6> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_x_7> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_0> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_1> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_2> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_3> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_4> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_5> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_6> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <in_ram_y_7> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <reset_dsp> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <enable_dsp> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_select> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_0> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_1> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_2> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_3> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_4> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_5> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_6> of sequential type is unconnected in block <top_level>.
+WARNING:Xst:2677 - Node <we_ram_7> of sequential type is unconnected in block <top_level>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <curr_state[1:5]> with one-hot encoding.
+------------------------
+ State      | Encoding
+------------------------
+ idle       | 00010
+ writing_a1 | 00001
+ writing_a2 | 00100
+ reading_b  | 01000
+ calc_c     | 10000
+------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <comm_fpga_fx2/FSM_1> on signal <state[1:4]> with user encoding.
+------------------------------------
+ State                  | Encoding
+------------------------------------
+ s_idle                 | 0000
+ s_get_count0           | 0001
+ s_get_count1           | 0010
+ s_get_count2           | 0011
+ s_get_count3           | 0100
+ s_begin_write          | 0101
+ s_write                | 0110
+ s_end_write_aligned    | 0111
+ s_end_write_nonaligned | 1000
+ s_read                 | 1001
+------------------------------------
+WARNING:Xst:1293 - FF/Latch <temp_addr_max_2> has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <f2hData_7> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <f2hData_6> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <f2hData_5> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <f2hData_4> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <f2hData_3> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <f2hData_2> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <f2hData_1> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <f2hData_0> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <check_addr_max_6> has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <temp_addr_max_1> has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <check_addr_max_5> has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <temp_addr_min_2> in Unit <top_level> is equivalent to the following 2 FFs/Latches, which will be removed : <temp_addr_min_1> <temp_addr_min_0> 
+INFO:Xst:2261 - The FF/Latch <check_addr_min_6> in Unit <top_level> is equivalent to the following 2 FFs/Latches, which will be removed : <check_addr_min_5> <check_addr_min_4> 
+
+Optimizing unit <top_level> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_level, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 51
+ Flip-Flops                                            : 51
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_level.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 208
+#      GND                         : 1
+#      INV                         : 33
+#      LUT1                        : 1
+#      LUT2                        : 6
+#      LUT3                        : 22
+#      LUT4                        : 22
+#      LUT5                        : 12
+#      LUT6                        : 47
+#      MUXCY                       : 31
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 56
+#      FD                          : 10
+#      FDE                         : 41
+#      LD                          : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 2
+#      IOBUF                       : 8
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              56  out of  18224     0%  
+ Number of Slice LUTs:                  143  out of   9112     1%  
+    Number used as Logic:               143  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    152
+   Number with an unused Flip Flop:      96  out of    152    63%  
+   Number with an unused LUT:             9  out of    152     5%  
+   Number of fully used LUT-FF pairs:    47  out of    152    30%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  25  out of    232    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------+-------------------------+-------+
+Clock Signal                                                                    | Clock buffer(FF name)   | Load  |
+--------------------------------------------------------------------------------+-------------------------+-------+
+curr_state[2]_GND_34_o_Mux_179_o(curr_state_curr_state[2]_GND_34_o_Mux_179_o1:O)| NONE(*)(to_B_next)      | 1     |
+fx2Clk_in                                                                       | BUFGP                   | 51    |
+curr_state[2]_GND_5_o_Mux_121_o(curr_state__n0579<9>1:O)                        | NONE(*)(temp_addr_min_2)| 4     |
+--------------------------------------------------------------------------------+-------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.536ns (Maximum Frequency: 220.459MHz)
+   Minimum input arrival time before clock: 5.562ns
+   Maximum output required time after clock: 6.663ns
+   Maximum combinational path delay: 7.027ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'curr_state[2]_GND_5_o_Mux_121_o'
+  Clock period: 2.067ns (frequency: 483.793MHz)
+  Total number of paths / destination ports: 6 / 4
+-------------------------------------------------------------------------
+Delay:               2.067ns (Levels of Logic = 1)
+  Source:            check_addr_max_4 (LATCH)
+  Destination:       temp_addr_max_0 (LATCH)
+  Source Clock:      curr_state[2]_GND_5_o_Mux_121_o falling
+  Destination Clock: curr_state[2]_GND_5_o_Mux_121_o falling
+
+  Data Path: check_addr_max_4 to temp_addr_max_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.581   1.196  check_addr_max_4 (check_addr_max_4)
+     LUT5:I0->O            1   0.254   0.000  check_addr_min[6]_chanAddr[6]_AND_10_o1 (check_addr_min[6]_chanAddr[6]_AND_10_o)
+     LD:D                      0.036          temp_addr_max_0
+    ----------------------------------------
+    Total                      2.067ns (0.871ns logic, 1.196ns route)
+                                       (42.1% logic, 57.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fx2Clk_in'
+  Clock period: 4.536ns (frequency: 220.459MHz)
+  Total number of paths / destination ports: 1091 / 83
+-------------------------------------------------------------------------
+Delay:               4.536ns (Levels of Logic = 3)
+  Source:            comm_fpga_fx2/count_14 (FF)
+  Destination:       comm_fpga_fx2/state_FSM_FFd2 (FF)
+  Source Clock:      fx2Clk_in rising
+  Destination Clock: fx2Clk_in rising
+
+  Data Path: comm_fpga_fx2/count_14 to comm_fpga_fx2/state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.525   1.259  comm_fpga_fx2/count_14 (comm_fpga_fx2/count_14)
+     LUT6:I0->O            1   0.254   1.112  comm_fpga_fx2/count[31]_GND_280_o_equal_19_o<31>5 (comm_fpga_fx2/count[31]_GND_280_o_equal_19_o<31>4)
+     LUT6:I1->O            4   0.254   0.804  comm_fpga_fx2/count[31]_GND_280_o_equal_19_o<31>6 (comm_fpga_fx2/count[31]_GND_280_o_equal_19_o)
+     LUT6:I5->O            1   0.254   0.000  comm_fpga_fx2/state_FSM_FFd1-In5 (comm_fpga_fx2/state_FSM_FFd1-In)
+     FD:D                      0.074          comm_fpga_fx2/state_FSM_FFd1
+    ----------------------------------------
+    Total                      4.536ns (1.361ns logic, 3.175ns route)
+                                       (30.0% logic, 70.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fx2Clk_in'
+  Total number of paths / destination ports: 156 / 84
+-------------------------------------------------------------------------
+Offset:              5.562ns (Levels of Logic = 2)
+  Source:            fx2GotData_in (PAD)
+  Destination:       comm_fpga_fx2/count_31 (FF)
+  Destination Clock: fx2Clk_in rising
+
+  Data Path: fx2GotData_in to comm_fpga_fx2/count_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            43   1.328   2.159  fx2GotData_in_IBUF (fx2GotData_in_IBUF)
+     LUT6:I0->O           32   0.254   1.519  comm_fpga_fx2/_n0223_inv1 (comm_fpga_fx2/_n0223_inv)
+     FDE:CE                    0.302          comm_fpga_fx2/count_0
+    ----------------------------------------
+    Total                      5.562ns (1.884ns logic, 3.678ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fx2Clk_in'
+  Total number of paths / destination ports: 59 / 18
+-------------------------------------------------------------------------
+Offset:              6.663ns (Levels of Logic = 2)
+  Source:            comm_fpga_fx2/state_FSM_FFd2 (FF)
+  Destination:       fx2Data_io<7> (PAD)
+  Source Clock:      fx2Clk_in rising
+
+  Data Path: comm_fpga_fx2/state_FSM_FFd2 to fx2Data_io<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              48   0.525   2.016  comm_fpga_fx2/state_FSM_FFd2 (comm_fpga_fx2/state_FSM_FFd2)
+     LUT5:I2->O            9   0.235   0.975  comm_fpga_fx2/f2hReady_out_inv1 (comm_fpga_fx2/f2hReady_out_inv)
+     OBUF:I->O                 2.912          fx2Write_out_OBUF (fx2Write_out)
+    ----------------------------------------
+    Total                      6.663ns (3.672ns logic, 2.991ns route)
+                                       (55.1% logic, 44.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Delay:               7.027ns (Levels of Logic = 3)
+  Source:            fx2GotData_in (PAD)
+  Destination:       fx2Read_out (PAD)
+
+  Data Path: fx2GotData_in to fx2Read_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            43   1.328   1.812  fx2GotData_in_IBUF (fx2GotData_in_IBUF)
+     LUT5:I3->O            2   0.250   0.725  comm_fpga_fx2/Mmux_fifoOp11 (fx2OE_out_OBUF)
+     OBUF:I->O                 2.912          fx2Read_out_OBUF (fx2Read_out)
+    ----------------------------------------
+    Total                      7.027ns (4.490ns logic, 2.537ns route)
+                                       (63.9% logic, 36.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock curr_state[2]_GND_5_o_Mux_121_o
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+curr_state[2]_GND_5_o_Mux_121_o|         |         |    2.067|         |
+fx2Clk_in                      |         |         |    2.221|         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fx2Clk_in
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+curr_state[2]_GND_34_o_Mux_179_o|         |    1.336|         |         |
+fx2Clk_in                       |    4.536|         |         |         |
+--------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.01 secs
+ 
+--> 
+
+
+Total memory usage is 389728 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  422 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

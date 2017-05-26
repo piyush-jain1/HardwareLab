@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 35: Syntax error near &quot;<arg fmt="%s" index="1">enable</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 32: Unit &lt;<arg fmt="%s" index="1">counter</arg>&gt; ignored due to previous errors.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="374" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 41: Entity &lt;<arg fmt="%s" index="1">counter</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 48: &lt;<arg fmt="%s" index="1">count</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 50: &lt;<arg fmt="%s" index="1">count</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 49: &lt;<arg fmt="%s" index="1">enable</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 47: &lt;<arg fmt="%s" index="1">reset</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 46: &lt;<arg fmt="%s" index="1">clk</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"G:/Sem IV/Hardware Lab/assignment1.2/counter.vhd" Line 44: &lt;<arg fmt="%s" index="1">enable</arg>&gt; is not declared.
+</msg>
+
+</messages>
+

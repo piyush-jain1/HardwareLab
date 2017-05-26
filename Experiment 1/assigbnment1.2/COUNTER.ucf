@@ -1,0 +1,9 @@
+NET "clk" CLOCK_DEDICATED_ROUTE  = "FALSE";
+NET "clk" LOC = N4;
+NET "reset" LOC = A10;
+NET "OUT1" LOC = N14;
+NET "OUT2" LOC = L14;
+NET "OUT3" LOC = M13;
+NET "OUT4" LOC = D4;
+
+

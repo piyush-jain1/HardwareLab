@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1394234513 source:c:\users\john\desktop\bytesend\main.c
+	<windows.h>
+	<stdio.h>
+	<time.h>
+
